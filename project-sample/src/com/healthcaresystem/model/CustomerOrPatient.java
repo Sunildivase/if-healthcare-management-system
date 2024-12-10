@@ -2,7 +2,7 @@ package com.healthcaresystem.model;
 
 public class CustomerOrPatient {
 
-    private int id;
+    private int patientId;
     private String fName;
     private String lName;
     private int age;
@@ -12,12 +12,12 @@ public class CustomerOrPatient {
     private String address;
 
 
-    public int getId() {
-        return id;
+    public int getPatientId() {
+        return patientId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPatientId(int patientId) {
+        this.patientId = patientId;
     }
 
     public String getfName() {
@@ -79,7 +79,7 @@ public class CustomerOrPatient {
     @Override
     public String toString() {
         return "CustomerOrPatient{" +
-                "id=" + id +
+                "patentId=" + patientId +
                 ", fName='" + fName + '\'' +
                 ", lName='" + lName + '\'' +
                 ", age=" + age +

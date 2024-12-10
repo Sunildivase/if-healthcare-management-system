@@ -30,7 +30,8 @@ public class HealthcareDemoOverDoWhile {
                 System.out.println("customer or patient created: "+customerOrPatient);
             }
             if(option == 2){
-
+             HospitalDetails hospitalDetails = healthcareDemoOverDoWhile.createHospital();
+                System.out.println("hospital registered: "+hospitalDetails);
             }
             if(option == 3){
 
@@ -57,7 +58,7 @@ public class HealthcareDemoOverDoWhile {
     private CustomerOrPatient createCustomerOrPatient(){
 
         System.out.println("please enter id");
-        int id = Integer.parseInt(scanner.nextLine());
+        int patientId = Integer.parseInt(scanner.nextLine());
 
         System.out.println("please enter fName");
         String fName = scanner.nextLine();
@@ -81,7 +82,7 @@ public class HealthcareDemoOverDoWhile {
         String address = scanner.nextLine();
 
         CustomerOrPatient customerOrPatient = new CustomerOrPatient();
-        customerOrPatient.setId(id);
+        customerOrPatient.setPatientId(patientId);
         customerOrPatient.setfName(fName);
         customerOrPatient.setlName(lName);
         customerOrPatient.setAge(age);
@@ -92,10 +93,35 @@ public class HealthcareDemoOverDoWhile {
         return customerOrPatient;
     }
 
-    private void createHospital(){
+    private HospitalDetails createHospital(){
+
+        System.out.println("please enter hospital id: ");
+        int hospitalId = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("please enter hospital name: ");
+        String hName = scanner.nextLine();
+
+        System.out.println("please enter hospital contactNo: ");
+        String contactNo = scanner.nextLine();
+
+        System.out.println("please enter hospital address: ");
+        String hAddress = scanner.nextLine();
+
+        System.out.println("please enter email id: ");
+        String emailId = scanner.nextLine();
+
+        HospitalDetails hospitalDetails = new HospitalDetails();
+        hospitalDetails.setHospitalID(hospitalId);
+        hospitalDetails.sethName(hName);
+        hospitalDetails.setContactNo(contactNo);
+        hospitalDetails.sethAddress(hAddress);
+        hospitalDetails.setEmailId(emailId);
+        return hospitalDetails;
 
     }
     private void createDoctor(){
+
+        System.out.println("please enter doctors id: ");
 
     }
     private void createDepartment(){
