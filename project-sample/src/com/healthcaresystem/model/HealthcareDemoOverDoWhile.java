@@ -12,6 +12,7 @@ public class HealthcareDemoOverDoWhile {
 
         int option = 0;
         do{
+            
             System.out.println("*** Healthcare Management System ***");
             System.out.println("please choose the option");
             System.out.println("1. Create customer");
@@ -31,25 +32,31 @@ public class HealthcareDemoOverDoWhile {
             }
             if(option == 2){
              HospitalDetails hospitalDetails = healthcareDemoOverDoWhile.createHospital();
-                System.out.println("hospital registered: "+hospitalDetails);
+                System.out.println("hospital details created: "+hospitalDetails);
             }
             if(option == 3){
-
+              DoctorDetails doctorDetails = healthcareDemoOverDoWhile.createDoctor();
+                System.out.println("doctors details created: "+doctorDetails);
             }
             if(option == 4){
-
+              Departments departments = healthcareDemoOverDoWhile.createDepartment();
+                System.out.println("department details created: "+departments);
             }
             if(option == 5){
-
+             AppointmentDetails appointmentDetails = healthcareDemoOverDoWhile.createAppointment();
+                System.out.println("appointment details created: "+appointmentDetails);
             }
             if(option == 6){
-
+                AllocationOfAppointment allocationOfAppointment = healthcareDemoOverDoWhile.createAllocation();
+                System.out.println("allocation od appointment created "+allocationOfAppointment);
             }
             if(option == 7){
-
+               PrescriptionDetails prescriptionDetails = healthcareDemoOverDoWhile.createPrescription();
+                System.out.println("prescription created "+prescriptionDetails);
             }
             if(option == 8){
-
+           BillingDetails billingDetails = healthcareDemoOverDoWhile.createBilling();
+                System.out.println("bill created "+billingDetails);
             }
 
         }
@@ -119,24 +126,140 @@ public class HealthcareDemoOverDoWhile {
         return hospitalDetails;
 
     }
-    private void createDoctor(){
+    private DoctorDetails createDoctor(){
 
         System.out.println("please enter doctors id: ");
+        int doctorId = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("please enter doctor first name: ");
+        String doctorFName = scanner.nextLine();
+
+        System.out.println("please enter doctor last name: ");
+        String doctorLName= scanner.nextLine();
+
+        System.out.println("please enter gender: ");
+        String gender = scanner.nextLine();
+
+        System.out.println("please enter age: ");
+        int age = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("please enter contact number: ");
+        String contactNo = scanner.nextLine();
+
+        System.out.println("please enter speciality: ");
+        String speciality = scanner.nextLine();
+
+        DoctorDetails doctorDetails = new DoctorDetails();
+        doctorDetails.setDoctorId(doctorId);
+        doctorDetails.setDoctorFName(doctorFName);
+        doctorDetails.setDoctorLName(doctorLName);
+        doctorDetails.setGender(gender);
+        doctorDetails.setAge(age);
+        doctorDetails.setContactNo(contactNo);
+        doctorDetails.setSpeciality(speciality);
+        return doctorDetails;
 
     }
-    private void createDepartment(){
+    private Departments createDepartment(){
+
+        System.out.println("please enter department id: ");
+        int deptId = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("please enter department name: ");
+        String deptName = scanner.nextLine();
+
+        System.out.println("enter hospital id: ");
+        int hospitalId = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("enter dept id ");
+        int doctorId = Integer.parseInt(scanner.nextLine());
+
+        Departments departments = new Departments();
+        departments.setDeptId(deptId);
+        departments.setDeptName(deptName);
+        departments.setHospitalId(hospitalId);
+        departments.setDoctorId(doctorId);
+        return departments;
+    }
+    private AppointmentDetails createAppointment(){
+        System.out.println("enter appointment id: ");
+        int appointmentId = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("enter patient id: ");
+        int patientId = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("enter doctor id: ");
+        int doctorId = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("enter hospital id: ");
+        int hospitalId = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("enter dept id: ");
+        int deptId = Integer.parseInt(scanner.nextLine());
+
+        AppointmentDetails appointmentDetails = new AppointmentDetails();
+        appointmentDetails.setAppointmentId(appointmentId);
+        appointmentDetails.setPatientId(patientId);
+        appointmentDetails.setDoctorId(doctorId);
+        appointmentDetails.setHospitalId(hospitalId);
+        appointmentDetails.setDeptId(deptId);
+        return appointmentDetails;
+    }
+    private AllocationOfAppointment createAllocation(){
+
+        System.out.println("enter allocation id ");
+        int allId = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("enter patient id ");
+        int patientId = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("enter doctor id ");
+        int doctorId = Integer.parseInt(scanner.nextLine());
+
+        AllocationOfAppointment allocationOfAppointment = new AllocationOfAppointment();
+        allocationOfAppointment.setAllId(allId);
+        allocationOfAppointment.setPatientId(patientId);
+        allocationOfAppointment.setDoctorId(doctorId);
+        return allocationOfAppointment;
 
     }
-    private void createAppointment(){
+    private PrescriptionDetails createPrescription(){
+
+        System.out.println("enter prescription id ");
+        int pId = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("enter patient id ");
+        int patientId = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("enter prescription details ");
+        String prescriptionDetail = scanner.nextLine();
+
+        PrescriptionDetails prescriptionDetails = new PrescriptionDetails();
+        prescriptionDetails.setpId(pId);
+        prescriptionDetails.setPatientId(patientId);
+        prescriptionDetails.setPrescriptionDetail(prescriptionDetail);
+        return prescriptionDetails;
 
     }
-    private void createAllocation(){
+    private BillingDetails createBilling(){
+        System.out.println("enter bill id ");
+        int billId = Integer.parseInt(scanner.nextLine());
 
-    }
-    private void createPrescription(){
+        System.out.println("enter appointment id ");
+        int appointmentId = Integer.parseInt(scanner.nextLine());
 
-    }
-    private void createBilling(){
+        System.out.println("enter bill");
+        int bill = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("enter total bill ");
+        int totalBill = Integer.parseInt(scanner.nextLine());
+
+        BillingDetails billingDetails = new BillingDetails();
+        billingDetails.setBillId(billId);
+        billingDetails.setAppointmentId(appointmentId);
+        billingDetails.setBill(bill);
+        billingDetails.setTotalBill(totalBill);
+        return billingDetails;
 
 
     }
