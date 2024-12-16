@@ -15,20 +15,20 @@ public class HealthcareDemoOverDoWhile {
         int option = 0;
         do{
 
-            System.out.println("*** Healthcare Management System ***");
+            System.out.println("************ Healthcare Management System *************");
             System.out.println("please choose the option");
-            System.out.println("1. Create customer");
+            System.out.println("1. Create person");
             System.out.println("2. Create hospital");
             System.out.println("3. Create doctors");
             System.out.println("4. Create departments");
-            System.out.println("5. Create appointment details");
-            System.out.println("6. Create prescription details");
-            System.out.println("7. Create billing details");
+            System.out.println("5. Create appointment");
+            System.out.println("6. Create prescription");
+            System.out.println("7. Create billing");
             System.out.println("0. Exit project");
             option = Integer.parseInt(scanner.nextLine());
 
             if(option == 1){
-                patient customerOrPatient   =healthcareDemoOverDoWhile.createCustomerOrPatient();
+                Person customerOrPatient   =healthcareDemoOverDoWhile.createCustomerOrPatient();
                 System.out.println("customer or patient created: "+customerOrPatient);
             }
             if(option == 2){
@@ -62,10 +62,13 @@ public class HealthcareDemoOverDoWhile {
         }
 
     }
-    private patient createCustomerOrPatient(){
+    private Person createCustomerOrPatient(){
 
         System.out.println("please enter id");
-        int patientId = Integer.parseInt(scanner.nextLine());
+        int id = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("please enter type");
+        String type = scanner.nextLine();
 
         System.out.println("please enter fName");
         String fName = scanner.nextLine();
@@ -88,8 +91,9 @@ public class HealthcareDemoOverDoWhile {
         System.out.println("please enter address");
         String address = scanner.nextLine();
 
-        patient customerOrPatient = new patient();
-        customerOrPatient.setPatientId(patientId);
+        Person customerOrPatient = new Person();
+        customerOrPatient.setId(id);
+        customerOrPatient.setType(type);
         customerOrPatient.setfName(fName);
         customerOrPatient.setlName(lName);
         customerOrPatient.setAge(age);

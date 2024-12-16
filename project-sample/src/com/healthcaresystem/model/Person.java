@@ -1,8 +1,9 @@
 package com.healthcaresystem.model;
 
-public class patient {
+public class Person {
 
-    private int patientId;
+    private int id;
+    private String type;
     private String fName;
     private String lName;
     private int age;
@@ -11,13 +12,35 @@ public class patient {
     private String alternateMobile;
     private String address;
 
-
-    public int getPatientId() {
-        return patientId;
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", type='" + type + '\'' +
+                ", fName='" + fName + '\'' +
+                ", lName='" + lName + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", alternateMobile='" + alternateMobile + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
 
-    public void setPatientId(int patientId) {
-        this.patientId = patientId;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        id = id;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getfName() {
@@ -74,19 +97,5 @@ public class patient {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    @Override
-    public String toString() {
-        return "CustomerOrPatient{" +
-                "patentId=" + patientId +
-                ", fName='" + fName + '\'' +
-                ", lName='" + lName + '\'' +
-                ", age=" + age +
-                ", gender='" + gender + '\'' +
-                ", mobile=" + mobile +
-                ", alternateMobile=" + alternateMobile +
-                ", address='" + address + '\'' +
-                '}';
     }
 }
