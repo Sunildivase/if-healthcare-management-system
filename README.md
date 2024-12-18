@@ -3,10 +3,13 @@ Project Overview
 The Core Java IF healthcare Management Project is a basic Java application that demonstrates a Appointment booking management system. It utilizes object-oriented programming principles and simulates the interactions between persons, doctors, hospitals , and appointments.
 
 # Features
--Manage  for persons and doctors.
--Simulate appointment assignment.
--hospitals and appointment management using Java models.
--Simple and intuitive structure for learning and demonstration.
+Manage  for persons and doctors.
+<ul>
+  <li>Manage  for persons and doctors.</li>
+  <li>Simulate appointment assignment.</li>
+  <li>hospitals and appointment management using Java models.</li>
+  <li>Simple and intuitive structure for learning and demonstration.</li>
+</ul>
 
 # Installation and Setup
 Prerequisites
