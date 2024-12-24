@@ -13,18 +13,27 @@ Manage  for persons and doctors.
 
 # Installation and Setup
 Prerequisites
--Java Development Kit (JDK) 21.
--An Integrated Development Environment (IDE) such as IntelliJ IDEA or Eclipse.
--Git (optional, for version control).
+<ul>
+  <li>Java Development Kit (JDK) 21.</li>
+  <li>An Integrated Development Environment (IDE) such as IntelliJ IDEA or Eclipse.</li>
+  <li>Git (optional, for version control).</li>
+</ul>
 
 # Steps
 Clone the repository:
--Navigate to the project directory:
--cd if-healthcare-management-system
--Open the project in your preferred IDE.
--Compile and run the application:
--Locate Main.java.
--Run the file to start the application.
+Navigate to the project directory:
+<ul>
+  <li>cd if-healthcare-management-system</li>
+  <li>Open the project in your preferred IDE.</li>
+  <li>Compile and run the application:</li>
+  <li>Locate Main.java.</li>
+  <li>Run the file to start the application.</li>
+</ul>
 
 # POJO (Plain Old Java Objects)
--person - (id, fname, lname, age, gender, mobile, alternateMobile, address)
+<ul>
+  <li>person - (id, fname, lname, age, gender, mobile, alternateMobile, address)</li>
+  <li>doctor -(doctorid,fname,lname,age,gender,contactNo,speciality)</li>
+  <li>hospita-(hopitalid,name,emailId,address,contactno</li>
+</ul>
+
