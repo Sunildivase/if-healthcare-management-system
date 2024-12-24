@@ -34,6 +34,6 @@ Navigate to the project directory:
 <ul>
   <li>person - (id, fname, lname, age, gender, mobile, alternateMobile, address)</li>
   <li>doctor -(doctorid,fname,lname,age,gender,contactNo,speciality)</li>
-  <li>hospita-(hopitalid,name,emailId,address,contactno</li>
+  <li>hospital-(hopitalid,name,emailId,address,contactno</li>
 </ul>
 
