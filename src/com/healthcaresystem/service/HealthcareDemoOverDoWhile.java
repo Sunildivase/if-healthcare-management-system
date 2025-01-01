@@ -25,6 +25,7 @@ public class HealthcareDemoOverDoWhile {
             System.out.println("6. Create prescription");
             System.out.println("7. Create billing");
             System.out.println("0. Exit project");
+
             option = Integer.parseInt(scanner.nextLine());
 
             if(option == 1){
